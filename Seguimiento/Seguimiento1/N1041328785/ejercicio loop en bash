@@ -1,1 +1,8 @@
 
+for i in {1..10}
+do mkdir carpeta${i}
+for j in {1..10} 
+do touch  carpeta${i}/file${j}.txt
+echo "intento numero ${j}${i}" > carpeta${i}/file${j}.txt
+done
+done
