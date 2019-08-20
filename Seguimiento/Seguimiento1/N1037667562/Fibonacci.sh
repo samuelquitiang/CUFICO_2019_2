@@ -11,7 +11,11 @@ do
     c=$(( f1 + f0 ))
     f0=$f1
     f1=$c
-    echo $c
+    rr=$(( $c % 2 ))
+    if [ $rr -eq 0 ]
+    then
+    echo "Fibo: $c "
+    fi
 done
 
     
