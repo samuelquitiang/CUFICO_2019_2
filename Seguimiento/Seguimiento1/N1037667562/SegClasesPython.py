@@ -21,14 +21,18 @@ class Particles:
 		ax1 = fig.add_subplot(121, projection='3d')
 		ax2 = fig.add_subplot(122, projection='3d')
 
-		ax1.plot(self.X1, self.Y1, self.Z1, 'c-', label='particula 1')
-		ax2.plot(self.X2, self.Y2, self.Z2, 'm-', label='Particula 2')
+		ax1.plot(self.X1, self.Y1, self.Z1, 'c-', label='Particle 1')
+		ax2.plot(self.X2, self.Y2, self.Z2, 'm-', label='Particle 2')
+
+		ax1.plot([self.X1[-1]], [self.Y1[-1]], [self.Z1[-1]], 'ko', label='last position')
+		ax2.plot([self.X2[-1]], [self.Y2[-1]], [self.Z2[-1]], 'ko', label='last position')
 
 		ax1.set_xlabel("x(t)"); ax1.set_ylabel("y(t)"); ax1.set_zlabel("z(t)")
 		ax2.set_xlabel("x(t)"); ax2.set_ylabel("y(t)"); ax2.set_zlabel("z(t)")
 
-		ax1.set_title("Particula 1"); ax2.set_title("Particula 2")
+		#ax1.set_title("Particula 1"); ax2.set_title("Particula 2")
 
+		ax1.legend(); ax2.legend()
 		plt.tight_layout()
 
 		plt.show()
@@ -128,6 +132,7 @@ yy0=[0,0,0,1,0,0,0,0,0,0,0,0]
 SISTEM = Particles(yy0, m1, m2, q1, q2, B)
 
 SISTEM.Graphics()
+
 
 
 
