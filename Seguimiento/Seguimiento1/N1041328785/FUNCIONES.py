@@ -1,7 +1,9 @@
 #!/bin/python
 
 
-#Se definen las particulas con sus respectivos atributos e instancias 
+#Se definen las particulas con sus respectivos atributos e instancias, ademas de las fuciones y operaciones 
+#a usar en la simulacion
+
 class Particle:
 	
 	carga = True
@@ -42,7 +44,7 @@ class Particle:
 		print("x = {0:.2f}, y = {1:.2f}, z = {2:.2f}".format(self.X, self.Y, self.Z))
 
 
-
+#calculo de la intensidad del campo electrico
 def electrico(P1, P2):
     
     r=P1.distancia(P2)
@@ -53,6 +55,7 @@ def electrico(P1, P2):
 
     return [Ex,Ey,Ez]
 
+#calculo de la fuerza de lorenzt
 def lorenzt(P1, P2, dt):
     B = (0., 0., 10.)
     Fx = P1.Carga * ( electrico(P2,P1)[0] + (P1.VY * B[2] - P1.VZ * B[1]) )
