@@ -25,9 +25,9 @@ class Particle:
         self.Carga = carga              #Carga
         self.trayectoriax = []          #Aquí guardaré la trayectoria x
         self.trayectoriay = []          #La y y la z
-         self.trayectoriaz = []
+        self.trayectoriaz = []
         
-    def Interaccion(paso):              #Todo lo que respecta a la interacción entre las dos particulas
+    def Interaccion(paso1):              #Todo lo que respecta a la interacción entre las dos particulas
         B = np.array([0.,0.,10.])       #El campo magnetico en sus componentes
         
         #El campo electrico es E= -nabla(fhi) donde fhi es el potencial. 
@@ -47,16 +47,16 @@ class Particle:
         
         #Metodo iterativo de Euler, paso a paso
         acc1 = f1/p1.M        # fuerza = masa*aceleracion => aceleracion = masa/fuerza
-        p1.VEL += (acc1*paso) #La velocidad un t+1 diminuto será así
-        p1.POS += p1.VEL*paso
+        p1.VEL += (acc1*paso1) #La velocidad un t+1 diminuto será así
+        p1.POS += p1.VEL*paso1
         p1.trayectoriax.append(p1.POS[0]) #Vamos añadiendo la posición a la trayectoria en cada una de sus componentes para después graficar
         p1.trayectoriay.append(p1.POS[1])
         p1.trayectoriaz.append(p1.POS[2])
        
         #Lo mismo pero para la particula 2
         acc2 = f2/p2.M
-        p2.VEL += acc2 * paso 
-        p2.POS += p2.VEL*paso
+        p2.VEL += acc2 * paso1
+        p2.POS += p2.VEL*paso1
         p2.trayectoriax.append(p2.POS[0])
         p2.trayectoriay.append(p2.POS[1])
         p2.trayectoriaz.append(p2.POS[2])
@@ -64,6 +64,7 @@ class Particle:
 p1 = Particle([0.1e-20,0.1e-20,0.1e-20],[0.,0.,0.],10.,1.)#Llamamos la clase particula y le definimos las propiedades de particula 1
 p2 = Particle([1.,0.1e-20,0.],[0.,0.,0.],10.,-1.)#Particula 2
 paso=0.01
+paso1=0.00001
 E_0= (1.)/(4*pi*epsilon_0)#Constante del potencial
     
 for t in np.arange(0,100,paso):#Llamamos la interaccion 10000 veces
