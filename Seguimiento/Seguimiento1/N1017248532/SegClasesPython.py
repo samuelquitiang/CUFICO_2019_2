@@ -29,14 +29,20 @@ class System:
 
         for _ in np.arange(to,tf,dt):
             #Cinematic equations with the aproximation df ~ f(t+dt) - f(t)
+            '''
+            The cinematic equations are thus:
+            x(t+dt) = x(t) + v(t+dt)*dt
+            v(t+dt) = v(t) + a(t+dt)*dt
+            '''
+            
             self.P1.A = self.P1.Lorentz_Force(self.P2.R,self.P2.Charge,self.B)/self.P1.M
             self.P2.A = self.P2.Lorentz_Force(self.P1.R,self.P1.Charge,self.B)/self.P2.M
 
             self.P1.V = self.P1.V + self.P1.A*dt
             self.P2.V = self.P2.V + self.P2.A*dt
 
-            self.P1.R = self.P1.R + self.P1.V*dt + 0.5*self.P1.A*dt**2
-            self.P2.R = self.P2.R + self.P2.V*dt + 0.5*self.P2.A*dt**2
+            self.P1.R = self.P1.R + self.P1.V*dt
+            self.P2.R = self.P2.R + self.P2.V*dt
 
 
             self.P1.R_plot = np.append(self.P1.R,self.P1.R_plot)
