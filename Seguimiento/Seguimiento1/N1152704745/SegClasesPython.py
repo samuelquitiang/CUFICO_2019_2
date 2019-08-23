@@ -44,6 +44,8 @@ def trajectory(p1, p2, B):
     ax.plot3D(r2[0], r2[1], r2[2], 'orange', label="Particle with charge {}".format(p2.charge), linewidth=1)
     ax.legend()
 
+    fig.savefig("SegClasesPython.png", format="png")
+
     plt.show()
 
 if __name__=="__main__":
