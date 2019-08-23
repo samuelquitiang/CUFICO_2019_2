@@ -1,7 +1,7 @@
 #!/bin/python
 
 #se hara una simulacion de la cinematica de que corresponde a dos particulas
-#inmersas en un campo magnetico
+#cargadas inmersas en un campo magnetico
 
 import numpy as np 
 import FUNCIONES as FUN
