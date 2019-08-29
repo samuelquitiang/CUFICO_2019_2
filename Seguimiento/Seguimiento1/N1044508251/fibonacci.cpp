@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-  long int f0, f1, fn;
+  int f0, f1, fn;
   f0 = 0;
   f1 = 1;
   //cout << f0 << endl;                                                                                                                                       
