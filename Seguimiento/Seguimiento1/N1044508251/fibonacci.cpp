@@ -7,7 +7,7 @@ int main()
   f0 = 0;
   f1 = 1;
   //cout << f0 << endl;                                                                                                                                       
-  for (int i=0; i<100; i++)
+  for (int i=0; i<1000; i++)
     {
       fn = f1+f0;
       if (f0%2 == 0)
