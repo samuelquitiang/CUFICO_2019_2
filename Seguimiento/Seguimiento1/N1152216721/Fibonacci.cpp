@@ -17,15 +17,15 @@ int main()
   next: a_n term of the Fibonacci sequence
   */
 
-  int counter_tot, counter_even;
-  long int prev, current, next;
+  int N, counter_tot, counter_even;
+  unsigned long long int prev, current, next; //unsigned long long int: 0 to 18,446,744,073,709,551,615
 
   /*Variables initialization. 
   N = 100 to avoid extremely large numbers.
   counter_tot starts at 2 because the first Fibonacci numbers
   are not generated but given: a_0 = 1, a_1 = 1.
   */
-  N = 100; counter_tot = 2; counter_even = 0;
+  N = 100; counter_tot = 2; counter_even = 0; //N = 100, not 1000 because of digits overflow
   prev = 1; current = 1;
 
 
