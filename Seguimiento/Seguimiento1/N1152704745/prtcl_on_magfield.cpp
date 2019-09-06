@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 
 class particle{
 public:
