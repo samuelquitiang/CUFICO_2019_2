@@ -89,7 +89,7 @@ int main()
 
 //PARAMETROS TEMPORALES
       float t = 0.0; // tiempo global de la simulacion
-      float dt = 0.1; // resolucion del intervalo de tiempo
+      float dt = 0.01; // resolucion del intervalo de tiempo
     //int i = 0; auxiliar progresion de estados
 
 //SIMULACION DE MOVIMIENTO EN UN INTERVALO t
