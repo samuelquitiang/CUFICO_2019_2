@@ -46,7 +46,7 @@ float Particle::Pos_evol(float t)
   Z = Z+(VZ*t)+(0.5*az*(t*t));
 }
 
-//Calcula la evolucion de la posicion transcurrido un dt
+//Calcula la evolucion de la velocidad transcurrido un dt
 float Particle::Vel_evol(float t)
 {
   VX = ax*t+VX;
