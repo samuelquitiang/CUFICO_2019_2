@@ -40,7 +40,7 @@ float Particula::Pos_evol(float ax, float ay, float az, float t)
 {
   int Bz = 10;               // Campo magnético en la dirección z. Esto significa que solo habrá aceleración en las direcciones x y y.
   ax = Carga*VY*Bz/M;        // Aceleración en x de acuerdo a  -> a = F/m = (q*(vxB))/m
-  ay = -0.1*Carga*VX*Bz/M;
+  ay = -1.0*Carga*VX*Bz/M;
   az = 0;
   X = X + (VX*t) + (0.5*ax*t*t);            // Posiciones de la partícula en un campo magnético.
   Y = Y + (VY*t) + (0.5*ay*t*t);
