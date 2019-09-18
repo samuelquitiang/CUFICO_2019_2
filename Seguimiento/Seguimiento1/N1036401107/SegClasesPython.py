@@ -1,3 +1,9 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import odeint
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib import style
+
 class Particula:
     
     def __init__(self,x1,y1,z1,vx1,vy1,vz1,x2,y2,z2,vx2,vy2,vz2,carga1,masa1,carga2,masa2):
