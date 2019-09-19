@@ -75,14 +75,14 @@ int main(void)
     
     // Solution calculation
     for(i=1;i<=steps;i++)
-    {
-        xn += h;
-        
+    {   
         // yn is updated
         RK6(xn, yn, h, function);
         
         y_exact = exact_solution(xn);
         diff = std::abs(yn-y_exact);
+        
+        xn += h;
         
         std::cout << xn << "," << yn << "," << y_exact << "," << diff << std::endl;
     }
