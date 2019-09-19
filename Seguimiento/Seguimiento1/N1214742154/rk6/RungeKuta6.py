@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/etc/anaconda3/bin/python
 
 import numpy as np
 import matplotlib.pyplot as plt
