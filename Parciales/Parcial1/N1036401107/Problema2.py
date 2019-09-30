@@ -161,9 +161,9 @@ ax2.legend()                  # Permite que aparezcan los nombres de los ejes y 
 ax3=plt.subplot(122)      #Grafica las diferencias promedio con respecto al paso, lo que nos habla de la convergencia de los métodos.
 
 ax3.plot(h,DifeP1,'r--',label='Error-paso. euler-n1' )  # Convergencia de Euler para el gas 1.
-ax3.plot(h,DifeP2,'g--',label='Error-paso. euler-n1' )  # Convergencia de Euler para el gas 2.
-ax3.plot(h,DifRP1,'b--',label='Error-paso. euler-n1' )  # Convergencia de RK4 para el gas 1.
-ax3.plot(h,DifRP2,'m--',label='Error-paso. euler-n1' )  # Convergencia de RK4 para el gas 2. 
+ax3.plot(h,DifeP2,'g--',label='Error-paso. euler-n2' )  # Convergencia de Euler para el gas 2.
+ax3.plot(h,DifRP1,'b--',label='Error-paso. RK4-n1' )  # Convergencia de RK4 para el gas 1.
+ax3.plot(h,DifRP2,'m--',label='Error-paso. RK4-n2' )  # Convergencia de RK4 para el gas 2. 
 ax3.set_ylabel('Prom-err')        # Nombre del eje y.
 ax3.set_xlabel('Paso')            # Nombre del eje x.
 ax3.set_title('Paso vs Err')      # Titulo del grafico.
