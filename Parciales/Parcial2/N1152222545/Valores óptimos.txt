@@ -1,4 +1,4 @@
-Los valores óptimos encontrados para mu y c son: 210 y 10 respectivamente.
+Los valores óptimos encontrados para mu y c son: 217 y 3.15 respectivamente.
 Estos valores se obtuvieron después de generar varias muestras de datos variando mu y c 
 para posteriormente hacer una prueba chi2 para cada una respecto a los datos suministrados.
 Los resultados para cada conjunto de datos se graficaron, de estas se vio para que valores chi2 era menor, lo cual quiere decir que describen mejor los datos. 
